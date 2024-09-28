@@ -1,0 +1,100 @@
+body {
+  background-color: #e3e9ff;
+}
+.App {
+  margin: 50px 30px;
+  padding: 25px 15px;
+  overflow: auto;
+}
+
+.to-do-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  border: 1px solid #6653afb9;
+  background-color: #b2c1f7ce;
+  border-radius: 15px;
+  width: 60%;
+  min-height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 1px 40px 10px #76ab9470 ;
+}
+
+.to-do-container h2 {
+  font-size: 60px;
+  color: #44bd72;
+}
+.to-do-container ul li {
+  min-width: 290px;
+  font-size: 25px;
+  overflow-wrap: break-word;
+  list-style-type: "👉";
+  cursor: pointer;
+}
+.to-do-container input {
+  background-color: #e3e8f5;
+  width: 270px;
+  height: 40px;
+  font-size: 17px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #44bd72;
+  box-shadow: 1px 1px 20px 1px #44bd728e;
+  transition: .3s;
+}
+.to-do-container input:focus {
+  scale: 1.03;
+}
+.done {
+  text-decoration: line-through;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .5s ;
+}
+.item:hover {
+  scale: 1.04;
+}
+.btn {
+  border: none;
+  color: #e3e9ff;
+  background-color:#1b3ab4;
+  margin: 20px;
+  width: 90px;
+  height: 35px;
+  border-radius: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: .3s;
+}
+.btn:hover {
+  scale: 1.05;
+}
+.trash {
+  cursor: pointer;
+}
+.myName {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  color: #5876eec0;  
+}
+.myName span{ 
+  color: #1b3ab4c0;  
+}
+@media (width < 600px) {
+  .to-do-container {
+    width: 90%;
+  }
+}
+@media (width < 430px) {
+  .to-do-container ul li {
+    width: 200px;
+  }
+}
